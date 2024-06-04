@@ -1,34 +1,58 @@
-![cove](https://github.com/HamzaAlmahrous/jigsaw-genius/blob/main/assets/photo_2023-12-24_10-25-35.jpg)
-
-# Puzzle Solver App
-
-## Overview
-This application utilizes advanced computer vision technology to solve puzzles and jigsaw images. It's designed to provide an intuitive and interactive experience, allowing users to upload a puzzle image and receive the solved version. Additionally, the app supports a unique feature where users can provide a hint image to assist in solving more complex puzzles.
-
-## Features
-- **Puzzle Solving**: Upload any puzzle or jigsaw image, and the app will analyze and present the solved puzzle.
-- **Hint Image Support**: Provide a secondary image as a hint to aid the solving process, particularly useful for complex puzzles.
-- **Interactive Interface**: User-friendly interface that makes navigation and usage straightforward and enjoyable.
-- **Advanced Computer Vision**: Leverages cutting-edge computer vision algorithms for accurate and efficient puzzle solving.
-
-## How to Use
-1. **Upload Puzzle Image**: Select and upload the puzzle or jigsaw image you wish to solve.
-2. **Optional Hint Image**: If needed, upload a hint image to assist in the puzzle-solving process.
-3. **Solve**: Hit the 'Solve' button and wait for the app to process and display the solved puzzle.
+# Puzzle Solver Console App
 
 ## Installation
-1. Clone the repository:
-   ```
-   git clone https://github.com/HamzaAlmahrous/jigsaw-genius.git
-   ```
-2. Navigate to the app directory:
-   ```
-   cd jigsaw-genius
-   ```
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+
+Installation instructions for a Python virtual environment, tested on the macOS platform using a Python 3.12 installation with brew.
+
+    /opt/homebrew/bin/python3 --version
+    Python 3.12.3
+
+    /opt/homebrew/bin/python3 -m venv venv
+
+    source venv/bin/activate
+
+    pip3 install -r requirements.txt
+
+## How to Use
+
+Activate `venv`:
+
+    source venv/bin/activate
+
+Command:
+
+    python SolvePuzzle.py --help
+     usage: SolvePuzzle [-h] --puzzle <file-path> [--hint <file-path>]
+
+     Solves a puzzles.
+
+     options:
+     -h, --help            show this help message and exit
+     --puzzle <file-path>  puzzle file
+     --hint <file-path>    hint puzzle file
+
+Deactivate `venv`:
+
+     deactivate
+
+## Examples
+
+### Example A
+
+Activate `venv`:
+
+    source venv/bin/activate
+
+Command:
+      
+    python SolvePuzzle.py --puzzle ./images/ExampleA/puzzle_to_solve.png --hint ./images/ExampleA/hint.png                  
+    Solve puzzle
+    Algorithm Execution Time: 11.22 seconds
+    Write Puzzle Image: ./tmp_20240604144411/puzzled_image_a.png
+    Write Puzzle Image: ./tmp_20240604144411/puzzled_image_b.png
+
+Deactivate `venv`:
+
+    deactivate
 
 ## Contributing
-Contributions to improve the app are welcome. Please fork the repository and submit a pull request with your changes.
