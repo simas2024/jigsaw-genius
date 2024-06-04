@@ -4,7 +4,7 @@
 
 ''' solve puzzle '''
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 import sys
 import os
@@ -18,7 +18,7 @@ sys.path.append(os.path.join(parent_dir,"jigsaw-genius","solvers","part_2"))
 from main import solve as solveb
    
 parser = argparse.ArgumentParser(prog='SolvePuzzle', description='Solves a puzzles.',
-                                 epilog='Example: SolvePuzzle.py --rows 30 --cols 40 --puzzle puzzleA.jpg --hint puzzleA_Hint.jpg')
+                                 epilog='Example: SolvePuzzle.py --puzzle ./images/ExampleA/puzzle_to_solve.png --hint ./images/ExampleA/hint.png')
 
 parser.add_argument('--puzzle', type=str, required=True, default=None, help='puzzle file', metavar=('<file-path>'))
 
