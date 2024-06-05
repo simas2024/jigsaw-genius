@@ -1,7 +1,5 @@
 FROM alpine:3.20
 
-RUN apk upgrade
-RUN apk update
 RUN apk add --no-cache python3=3.12.3-r1 py3-pip py3-opencv
 
 WORKDIR /app
