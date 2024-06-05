@@ -99,3 +99,15 @@ Command:
     Solve puzzle
     Algorithm Execution Time: 22.85 seconds
     Write Puzzle Image: /app/tmp_20240605081558/solved_puzzle.png
+
+## Benchmark
+
+Command:
+
+    --puzzle ./images/ExampleA/puzzle_to_solve.png --hint ./images/ExampleA/hint.png
+
+| Plattform | Runtime | Time [seconds] |
+| --- | --- | --- |
+| Mac mini M1 16 GB | Native | 11.39  |
+| Mac mini M1 16 GB | Docker | 22.85  |
+| Raspberry 5 8 GB | Docker | 47.26 |
