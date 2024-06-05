@@ -23,12 +23,9 @@ def solve(image_path, hint_image_path, result_path):
     serial_execution_time = finish_time_serial_genetic - start_time_serial_genetic
     print("Algorithm Execution Time: {:.2f} seconds".format(serial_execution_time))
 
-    print(f"Write Puzzle Image: {os.path.join(result_path,'puzzled_image_a.png')}")
+    path_final_image=os.path.join(result_path,'solved_puzzle.png')
+
+    print(f"Write Puzzle Image: {path_final_image}")
 
     os.makedirs(result_path, exist_ok=True)
-    cv.imwrite(os.path.join(result_path,'puzzled_image_a.png'),final_image)
-
-# image_path = 'C:/ITE/ITE 5/CV/practical_lectures/cv_project/images/part_2_merged/24pieces1.png'
-# hint_image_path = 'C:/ITE/ITE 5/CV/practical_lectures/cv_project/images/part_2_merged/24pieces1_solved.png'
-
-# merged_solve(image_path, hint_image_path)
+    cv.imwrite(path_final_image,final_image)
