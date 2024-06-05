@@ -13,7 +13,7 @@ Installation instructions for a Python virtual environment, tested on the macOS 
 
     pip3 install -r requirements.txt
 
-## How to Use
+## How to Use 
 
 Activate `venv`:
 
@@ -35,6 +35,26 @@ Command:
 Deactivate `venv`:
 
      deactivate
+
+## How to use with Docker
+
+To use this application with Docker, follow these instructions:
+
+### Building the Docker Image
+
+To build the Docker image, run the following command in the directory containing the Dockerfile:
+
+    docker build -t puzzle-solver .
+
+This command builds a Docker image named `puzzle-solver`.
+
+### Running the Application in Docker
+
+To run the application using Docker, you can mount the current directory to the `/app` directory in the container. This allows the container to access and write files to your host directory. Use the following command to run the application:
+
+    docker run -it -v .:/app --rm puzzle-solver --help
+
+This command runs the puzzle Docker container, showing the help information as it would when running the application natively. Any command line arguments applicable to `SolvePuzzle.py` can be used after the image name.
 
 ## Examples
 
@@ -62,4 +82,20 @@ Deactivate `venv`:
 
     deactivate
 
-## Contributing
+### Example A with Docker
+
+Run the following command in the directory containing the Dockerfile:
+
+Command:
+      
+    docker run -it -v .:/app --rm puzzle-solver --puzzle ./images/ExampleA/puzzle_to_solve.png --hint ./images/ExampleA/hint.png
+    Solve puzzle
+    Algorithm Execution Time: 23.77 seconds
+    Write Puzzle Image: /app/tmp_20240605081446/solved_puzzle.png
+
+Command:
+      
+    docker run -it -v .:/app --rm puzzle-solver --puzzle ./images/ExampleA/puzzle_to_solve.png
+    Solve puzzle
+    Algorithm Execution Time: 22.85 seconds
+    Write Puzzle Image: /app/tmp_20240605081558/solved_puzzle.png

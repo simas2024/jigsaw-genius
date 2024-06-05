@@ -1,0 +1,12 @@
+.dockerignore
+.git/
+.gitignore
+.vscode/
+requirements.txt
+Dockerfile
+README.md
+tmp_*
+venv/
+__pycache__/
+*.pyc
+.DS_Store
