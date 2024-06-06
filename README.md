@@ -120,5 +120,3 @@ Errors with examples where puzzle pieces are not aligned straight:
     --puzzle ./images/ExampleB/puzzle_to_solve.png --hint ./images/ExampleE/hint.png
 
     --puzzle ./images/ExampleC/puzzle_to_solve.png --hint ./images/ExampleE/hint.png
-
-    --puzzle ./images/ExampleD/puzzle_to_solve.png --hint ./images/ExampleE/hint.png
