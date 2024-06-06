@@ -104,10 +104,21 @@ Command:
 
 Command:
 
-    --puzzle ./images/ExampleA/puzzle_to_solve.png --hint ./images/ExampleA/hint.png
+    --puzzle ./images/<example>/puzzle_to_solve.png --hint ./images/<example>/hint.png
 
-| Plattform | Runtime | Time [seconds] |
-| --- | --- | --- |
-| Mac mini M1 16 GB | Native | 11.39  |
-| Mac mini M1 16 GB | Docker | 22.85  |
-| Raspberry 5 8 GB | Docker | 47.26 |
+| `<example>` | Plattform | Runtime | Time [seconds] |
+| --- | --- | --- | --- |
+| ExampleA | Mac mini M1 16 GB | Native | 11.39  |
+| ExampleA | Mac mini M1 16 GB | Docker | 22.85  |
+| ExampleA | Raspberry 5 8 GB | Docker | 47.26 |
+| ExampleE | Mac mini M1 16 GB | Docker | 8.01  |
+
+## Known issues
+
+Errors with examples where puzzle pieces are not aligned straight:
+
+    --puzzle ./images/ExampleB/puzzle_to_solve.png --hint ./images/ExampleE/hint.png
+
+    --puzzle ./images/ExampleC/puzzle_to_solve.png --hint ./images/ExampleE/hint.png
+
+    --puzzle ./images/ExampleD/puzzle_to_solve.png --hint ./images/ExampleE/hint.png
